@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Gallery</title>
+    <!-- Main stylesheet for gallery styles -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Font Awesome for slider arrow icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <div class="container">
+        <!-- Slider wrapper holds the entire slider UI -->
+        <div class="slider-wrapper">
+            <!-- Previous slide button (left arrow) -->
+            <button id="prev-slide" class="slide-button fa-solid fa-chevron-left"></button>
+            <!-- Image list: horizontally scrollable gallery images -->
+            <div class="image-list">
+                <img src="Images/pexels-603417-32610861.jpg" alt="img1" class="image-item">
+                <img src="Images/pexels-janikbutz-5366526.jpg" alt="img2" class="image-item">
+                <img src="Images/pexels-moose-photos-170195-1037992.jpg" alt="img3" class="image-item"> 
+                <img src="Images/pexels-nextvoyage-2047374.jpg" alt="img4" class="image-item">
+                <img src="Images/pexels-nietjuhart-1809340.jpg" alt="img5" class="image-item">
+                <img src="Images/pexels-603417-32610861.jpg" alt="img1" class="image-item">
+                <img src="Images/pexels-pixabay-277290.jpg" alt="img2" class="image-item">
+                <img src="Images/pexels-thepaintedsquare-1010519.jpg" alt="img3" class="image-item"> 
+                <img src="Images/pexels-jibarofoto-2111759 (1).jpg" alt="img4" class="image-item">
+                <img src="Images/pexels-studio-rocha-1298474155-24702318.jpg" alt="img5" class="image-item">
+            </div>
+            <!-- Next slide button (right arrow) -->
+            <button id="next-slide" class="slide-button fa-solid fa-chevron-right"></button>
+            <!-- Custom slider scrollbar for manual scrolling -->
+            <div class="slider-scrollbar">
+                <div class="scrollbar-track">
+                    <div class="scrollbar-thumb"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- JavaScript for slider functionality -->
+    <script src="file.js" defer></script>
+</body>
+</html>

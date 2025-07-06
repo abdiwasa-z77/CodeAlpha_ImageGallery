@@ -1,0 +1,154 @@
+/* Reset default browser styles and set box-sizing */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Center the gallery vertically and horizontally, set background gradient */
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: #e69a20;
+    background: linear-gradient(253deg,rgba(230, 154, 32, 1) 0%, rgba(10, 10, 10, 1) 100%);
+}
+
+/* Container for the gallery, responsive width */
+.container {
+    max-width: 1200px;
+    width: 95%;
+}
+
+/* Wrapper for the slider, used for positioning elements absolutely */
+.slider-wrapper {
+    position: relative;
+}
+
+/* Style for the left/right slide buttons */
+.slider-wrapper .slide-button {
+    height: 50px;
+    width: 50px;
+    color: #fff;
+    background: #000;
+    border-radius: 50%;
+    font-size: 2.2em;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+/* Hover effect for slide buttons */
+.slider-wrapper .slide-button:hover {
+    background: #444;
+}
+
+/* Hide previous button by default (shown only when needed) */
+.slider-wrapper .slide-button#prev-slide {
+    left: -20px;
+    display: none;
+}
+
+/* Position next button on the right */
+.slider-wrapper .slide-button#next-slide {
+    right: -20px;
+}
+
+/* Image list: horizontal grid of images, hides scrollbar */
+.slider-wrapper .image-list {
+    display: grid;
+    gap: 18px;
+    font-size: 0;
+    margin-bottom: 30px;
+    overflow-x: auto;
+    scrollbar-width: none;
+    grid-template-columns: repeat(10, 1fr);
+}
+
+/* Hide scrollbar for Webkit browsers */
+.slider-wrapper .image-list::-webkit-scrollbar {
+    display: none;
+}
+
+/* Style for each image in the gallery */
+.slider-wrapper .image-list .image-item {
+    width: 325px;
+    height: 400px;
+    object-fit: cover;
+}
+
+/* Custom scrollbar container */
+.container .slider-scrollbar {
+    height: 24px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+/* Scrollbar track styling */
+.slider-scrollbar .scrollbar-track {
+    height: 2px;
+    width: 100%;
+    background: #fff;
+    position: relative;
+    border-radius: 4px;
+}
+
+/* Thicker track on hover */
+.slider-scrollbar:hover .scrollbar-track {
+    height: 4px;
+}
+
+/* Scrollbar thumb (draggable part) */
+.slider-scrollbar .scrollbar-thumb {
+    height: 100%;
+    width: 50%;
+    background: #000;
+    position: absolute;
+    border-radius: inherit;
+    cursor: grab;
+}
+
+/* Thumb style when active (dragging) */
+.slider-scrollbar .scrollbar-thumb:active {
+    cursor: grabbing;
+    height: 8px;
+    top: -2px;
+}
+
+/* Invisible area around the thumb for easier grabbing */
+.slider-scrollbar .scrollbar-thumb::after {
+    content: "";
+    position: absolute;
+    left: 0; right: 0;
+    top: -10px; bottom: -10px;
+}
+
+/* Responsive styles for screens <= 1020px */
+@media (max-width: 1020px) {
+    /* Hide slide buttons on smaller screens */
+    .slider-wrapper .slide-button {
+        display: none !important;
+    }
+
+    /* Reduce gap and margin for images */
+    .slider-wrapper .image-list {
+        gap: 10px;
+        margin-bottom: 15px;
+    }
+
+    /* Smaller images for mobile/tablet */
+    .slider-wrapper .image-list .image-item {
+        width: 280px;
+        height: 380px;
+    }
+
+    /* Make scrollbar thumb smaller on small screens */
+    .slider-scrollbar .scrollbar-thumb {
+        width: 20%;
+    }
+}
