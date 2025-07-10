@@ -62,6 +62,8 @@ Image Gallery/
 
 - [Font Awesome](https://fontawesome.com/) for navigation icons (loaded via CDN).
 
+## Explanation Video
+https://www.linkedin.com/posts/abdiwasa-abdilahi-abdi-jirde-492405313_imagegallery-frontendproject-codealpha-activity-7348689680374099968-n9WD?utm_source=share&utm_medium=member_desktop&rcm=ACoAAE-dxG4BkyTkPS41flNqolY3vnYuaxVvbx4
 
 ## License
 
